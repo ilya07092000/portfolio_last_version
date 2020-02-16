@@ -1,0 +1,58 @@
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+}
+
+.footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer__contact {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.contact__img { 
+    width: 40px;
+}
+
+.footer__text {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    margin-right: 2rem;
+}
+
+.contact__icon + .contact__icon {
+    margin-left: 2rem;
+}
+.gmail {
+    font-size: 1.2rem;
+    color: #fff;
+    padding-left: 1rem;
+    width: 50%;
+    text-align: center;
+}
+
+@media(max-width: 700px) {
+
+    .footer__contact {
+        width: 100%;
+    }
+
+    .gmail {
+        width: 100%;
+    }
+}
+
+@media(max-width: 570px) {
+    .footer__text {
+        font-size: 1.5rem;
+    }
+}

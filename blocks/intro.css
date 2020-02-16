@@ -1,0 +1,121 @@
+.intro {
+  height: 100vh;
+  min-height: 570px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.intro__inner {
+  text-align: center;
+}
+.intro__title {
+  text-transform: uppercase;
+  font-size: 10rem;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  letter-spacing: 0.4rem;
+  position: relative;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-right-color: 3px solid #fff;
+  display: inline;
+  padding: 0 3rem;
+}
+.intro__title:before {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: width 0.3s linear;
+}
+.intro__title:after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  transition: width 0.3s linear;
+}
+.intro__title:hover:before {
+  width: 100%;
+}
+.intro__title:hover:after {
+  width: 100%;
+}
+.intro__scroll {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #57b5ff;
+}
+.intro__btn {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 3rem;
+  background-color: #a5bcff;
+  border-radius: 30px;
+  font-weight: 700;
+  color: #fff;
+  transition: color 0.2s linear, background 0.2s linear;
+}
+.intro__btn:hover {
+  color: #a5bcff;
+  background-color: #fff;
+}
+@media (max-width: 991px) {
+  .intro__title {
+    font-size: 7rem;
+  }
+  .intro__subtitle {
+    font-size: 1.3rem;
+  }
+  .intro__scroll {
+    font-size: 1rem;
+  }
+  .intro__arrow {
+    width: 60px;
+  }
+}
+@media (max-width: 772px) {
+  .intro__title {
+    font-size: 6rem;
+    padding: 0 1rem;
+  }
+  .intro__subtitle {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+  .intro__scroll {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .intro__title {
+    font-size: 3.5rem;
+  }
+  .intro__scroll {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 400px) {
+  .intro__title {
+    font-size: 2.5rem;
+  }
+  .intro__scroll {
+    font-size: 0.8rem;
+  }
+  .intro__btn {
+    padding: 1rem 2rem;
+  }
+}
