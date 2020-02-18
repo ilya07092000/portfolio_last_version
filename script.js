@@ -1,6 +1,6 @@
 $(function() {
 
-    $('.loader').delay(0).fadeOut('slow');
+    $('.loader').delay(1200).fadeOut('slow');
   
 // SMOOTH SCROLL
   $("[data-scroll]").on("click", function() {
