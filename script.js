@@ -27,6 +27,7 @@ $(function() {
             navigation.removeClass("fixed");
         }
     });
+    
 
     // MODAL
     let modal = $("#modal");
