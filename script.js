@@ -1,6 +1,6 @@
 $(function() {
 
-    $('.loader').delay(1500).fadeOut('slow');
+    $('.loader').delay(0).fadeOut('slow');
   
 // SMOOTH SCROLL
   $("[data-scroll]").on("click", function() {
@@ -15,7 +15,6 @@ $(function() {
     });
 
     // FIXED HEADER
-
     let navigation = $("#header__nav"),
         headerH = $("header").innerHeight(),
         scrollOffset = 0;
@@ -30,7 +29,6 @@ $(function() {
     });
 
     // MODAL
-
     let modal = $("#modal");
     
     $(".intro__btn").on("click", function() {
@@ -49,5 +47,20 @@ $(function() {
             $("body").removeClass("active");    
         }
     })
+
+    // SLIDER
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
 
 });
