@@ -28,7 +28,6 @@ $(function() {
         }
     });
     
-
     // MODAL
     let modal = $("#modal");
     
