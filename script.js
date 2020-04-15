@@ -14,6 +14,13 @@ $(function() {
     }, 500);
     });
 
+    // BURGER BTN
+
+    $("#burger").on("click", function() {
+        $("nav").slideToggle("active");
+        $("#burger").toggleClass("active")
+    })
+
     // FIXED HEADER
     let navigation = $("#header__nav"),
         headerH = $("header").innerHeight(),

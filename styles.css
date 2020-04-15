@@ -56,10 +56,13 @@ body.active {
   left: 0;
   z-index: 999999;
   max-width: 100%;
-  background-color: rgba(46, 29, 29, 0.5);
+  background-color: rgba(46, 29, 29, 0.7);
   width: 100%;
   max-width: 100%;
   font-family: "Poppins", sans-serif;
+}
+nav {
+  display: block;
 }
 
 .header__nav__inner {
@@ -79,10 +82,12 @@ body.active {
   color: #fff;
   font-weight: 500;
   line-height: 1;
+  padding: 10px 0;
 }
 .header__text:hover {
   color: #beb8b8;
 }
+
 nav a {
   color: white;
   text-decoration: none;
@@ -92,22 +97,63 @@ nav a {
   transition: opacity 0.2s linear;
   font-size: 1rem;
   margin-left: 1rem;
+  padding: 32px 10px;
+  display: inline-block;
+  min-width: 72px;
+  text-align: center;
+}
+.burger {
+  padding: 20px 10px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  display: none;
+}
+.burger.active .line::after {
+  display: none;
+}
+.burger.active .line {
+  width: 30px;
+  transform: rotate(-45deg);
+}
+.burger.active .line::before {
+  transform: rotate(90deg);
+  bottom: 0px;
+}
+.burger:focus {
+  outline: none;
+}
+.line {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  transition: transform .2s linear;
+}
+.line::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  top: 7px;
+  left: 0;
+}
+.line::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  bottom: 7px;
+  left: 0;
+  transition: transform .2s linear;
 }
 nav a:hover {
-  opacity: 0.8;
-}
-nav a:after {
-  content: "";
-  background-color: white;
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  bottom: -0.2rem;
-  left: 1px;
-  opacity: 0;
-  border-radius: 1px;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
+  background-color: #1f4384;
 }
 nav a:hover::after {
   opacity: 0.9;
@@ -120,12 +166,23 @@ nav a:hover::after {
     font-size: 1.3rem;
   }
 }
-@media (max-width: 580px) {
-  nav a {
-    font-size: 0.7rem;
+@media (max-width: 460px) {
+  .burger {
+    display: block;
   }
-  .header__text {
-    font-size: 1.2rem;
+  nav {
+    display: none;
+    width: 100%;
+    border-top: 1px solid rgb(131, 105, 105);
+  }
+  .header__nav__inner {
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(131, 105, 105);
   }
 }
 .intro {
@@ -260,6 +317,12 @@ nav a:hover::after {
 
   .intro__btn img {
     width: 60px;
+  }
+  nav a {
+    padding: 25px 10px;
+  }
+  .header__text {
+    padding: 5px 0;
   }
 }
 @media (max-width: 400px) {
