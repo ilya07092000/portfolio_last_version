@@ -15,9 +15,8 @@ $(function() {
     });
 
     // BURGER BTN
-
     $("#burger").on("click", function() {
-        $("nav").slideToggle("active");
+        $("nav").toggleClass("active");
         $("#burger").toggleClass("active")
     })
 
@@ -42,6 +41,14 @@ $(function() {
         $(".modal__container").fadeIn();
         $("body").addClass("active");
     });
+
+    $("#nav__contact").on("click", function() {
+        $("#burger").removeClass("active")
+        $("nav").removeClass("active");
+        $(".modal__container").fadeIn();
+        $("body").addClass("active");
+
+    })
 
     $(".close__btn").on("click", function() {
         $(".modal__container").fadeOut(); 
