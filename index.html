@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,400,500,700&display=swap" rel="stylesheet">
@@ -14,45 +15,43 @@
     <title>Ilya Ischenko</title>
 </head>
 <body>
-    
+    <!-- HEADER -->
     <header id="home">
         <div class="header__nav" id="header__nav">
             <div class="container">
-                <div class="header__nav-inner">
+                <div class="header__nav__inner">
                     <div class="header__logo">
-                            <p class="header__text" data-scroll="#home">
-                                Ilya Ischenko
-                            </p>
-                        </div>
-                        <nav>
-                            <a href="" data-scroll="#home" class="nav-link">home</a>
-                            <a href="" data-scroll="#about" class="nav-link">about</a>
-                            <a href="" data-scroll="#works" class="nav-link">works</a>
-                        </nav>
+                        <p class="header__text" data-scroll="#home">
+                            Ilya Ischenko
+                        </p>
                     </div>
+                    <nav>
+                        <a href="#" data-scroll="#home">home</a>
+                        <a href="#" data-scroll="#about">about</a>
+                        <a href="#" data-scroll="#works">works</a>
+                    </nav>
+                </div>
             </div>
         </div>
 
         <div class="intro" id="home">
             <div class="container">
                 <div class="intro__inner">
-                            <h1 class="intro__title">Welcome</h1>
-                            <h3 class="intro__scroll">Scroll Down to see more</h3>
-
-                            <div class="intro__btn" id="intro__btn">
-                                Contact me
-                            </div>
+                    <h1>Welcome</h1>
+                    <h3>Scroll Down to see more</h3>
+                    <button class="intro__btn" id="intro__btn">
+                        <img src="./images/agenda.svg" alt="">
+                    </button>
                 </div>
-        </div>
+            </div>
         </div>
     </header>    
+    <!-- HEADER -->
 
-
-
+    <!-- ABOUT SECTION -->
     <div class="about__section" id="about">
         <div class="container">
             <div class="about__inner">
-
                 <div class="about__header">
                     <h1>About Me</h1>
                 </div>
@@ -61,62 +60,29 @@
                     <div class="about__photo">
                         <img class="about__img" src="images/about-photo.jpg" alt="">
                     </div>
-                    <div class="about__text">
-                        
-                        <p class="birthday"><span class="main__text"> Date of Birth: </span> 7 september 2000 (19 years old).</p>
-                        <p class="about__me"><span class="main__text">Details about me:</span>  studying in the State University of Telecommunications on the second course. My native city is Kyiv. I have good knowledges in sphere of frontend, I can make adaptive sites with grid or flexbox layout and also working with bootstrap. You can see my sites below. I ALWAYS learn something new because I want to upgrade my skills in frontend. My purpose is to get a gob and make sites every day!</p>    
-                        <p class="my__skills"><span class="main__text">My skills:</span> Html 5, Css 3, JavaScript (ES6), Jquery, 
-                            the basics of Vue.js, Vue Router, Vuex, adaptive layout, Github, Sass, Less, Bootstrap, BEM methodology.</p>   
-                        <p class="languages"> <span class="main__text">Languages:</span> Ukranian, Russian, English - medium (good in technical documentanion).</p>
-                        <p class="programms">
-                           <span class="main__text"> Knowledge of the programms:</span> I can work in Visual Studio Code, Sublime Text, Photoshop, Adobde Xd, Avacode.</p>
-                        <p class="qualities"><span class="main__text">Personal qualities:</span> responsibility, teamwork, creativity, ambition, literate.</p>
 
+                    <div class="about__text">
+                        <p><span class="main__text"> Date of Birth: </span> 7 september 2000 (19 years old).</p>
+                        <p><span class="main__text">Details about me:</span> I am second course student in State University of Telecommunications. A while ago I found myself in Frontend Development and I will progress in this sphere. I like programming and I want to be a Senior Developer. </p>    
+                        <p><span class="main__text">My skills:</span> HTML/CSS, JavaScript, Jquery, Vue.js (incl. Vuex, Vue Router), Bootstrap, Git, Sass,Less</p>   
+                        <p> <span class="main__text">Languages:</span> Ukranian, Russian, English - medium (good in technical documentanion).</p>
+                        <p><span class="main__text"> Knowledge of the programms:</span> I can work in Visual Studio Code, Sublime Text, Photoshop, Adobde Xd, Avacode, Sketch.</p>
+                        <p><span class="main__text">Personal qualities:</span> responsibility, teamwork, creativity, ambition, literate.</p>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>  <!-- about__section -->
+    </div> 
+    <!-- ./ABOUT SECTION -->
 
+    <!-- WORKS -->
     <div class="works" id="works">
         <div class="container">
-
             <div class="works__header">
                 Works
             </div>
 
-            <!-- <div class="works__inner">
-                <div class="works__item">
-                    <a target="_blank" href="https://htmlpreview.github.io/?https://github.com/ilya07092000/Austera__web/blob/master/index.html">
-                        <div class="works__icon">
-                            <img src="images/Preview.png" class="works__img">
-                        </div>
-                    </a>
-                    <div class="works__name">Austera</div>
-                </div>
-
-                <div class="works__item">
-                    <a target="_blank" href="https://htmlpreview.github.io/?https://github.com/ilya07092000/mogo/blob/master/index.html">
-                        <div class="works__icon">
-                            <img src="images/Preview-2.png" class="works__img">
-                        </div>
-                    </a>
-                    <div class="works__name">MoGo</div>
-                </div>
-
-                <div class="works__item">
-                    <a target="_blank" href="https://htmlpreview.github.io/?https://github.com/ilya07092000/m-ship/blob/master/index.html">
-                        <div class="works__icon">
-                            <img src="images/preview-3.png" class="works__img">
-                        </div>
-                    </a>
-                    <div class="works__name">Membership</div>
-                </div>
-            </div> -->
-
             <div class="swiper-container">
-
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="works__item">
@@ -153,29 +119,23 @@
                 </div>
              
                 <div class="swiper-pagination"></div>
-            
-            
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            
-                
-            </div>
-
-
-
-            
+                <div class="swiper-button-next"></div> 
+            </div>  
         </div>
     </div>
+    <!-- ./WORKS -->
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container"> 
             <div class="footer__inner">
                 <div class="footer__contact">
                     <div class="footer__text">Contact me: </div>
-                    <a class="contact__icon" href="https://t.me/Able0709" target="_blank">
-                        <img class="contact__img" src="images/telegram.png" alt="">
-                    </a>
-                    <a class="contact__icon" href="mailto:ischenko2012@gmail.com target="_blank">
+                        <a class="contact__icon" href="https://t.me/Able0709" target="_blank">
+                            <img class="contact__img" src="images/telegram.png" alt="">
+                        </a>
+                        <a class="contact__icon" href="mailto:ischenko2012@gmail.com target="_blank">
                         <img class="contact__img" src="images/gmail.png" alt="">
                     </a>
                 </div>
@@ -186,7 +146,9 @@
             </div>
         </div>
     </footer>
+    <!-- ./FOOTER -->
 
+    <!-- MODAL CONTAINER -->
     <div class="modal__container">
         <div class="modal" id="modal">
             <div class="modal__dialog">
@@ -202,21 +164,16 @@
             </div>
         </div>
     </div>
-
-
-
+    <!-- ./MODAL CONTAINER -->
 
     <div class="loader">
-		<div class="loader-container circle-pulse-multiple">
+	    <div class="loader-container circle-pulse-multiple">
 			<div class="loader">
 				<div class="circle-1"></div>
 				<div class="circle-2"></div>
 				<div class="circle-3"></div>
 			</div>
 		</div>		
-    </div>
-    
-
- 
+    </div> 
 </body>
 </html>

@@ -1,6 +1,6 @@
 $(function() {
 
-    $('.loader').delay(1200).fadeOut('slow');
+    $('.loader').delay(200).fadeOut('slow');
   
 // SMOOTH SCROLL
   $("[data-scroll]").on("click", function() {
@@ -61,6 +61,4 @@ $(function() {
           prevEl: '.swiper-button-prev',
         },
       });
-
-
 });
