@@ -616,3 +616,25 @@ nav a:hover::after {
     z-index: 9999;
   }
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  padding: 80px 10px 80px 10px;
+}
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after {
+  background-color: rgba(211, 201, 201, 0.7);
+}
+@media(max-width: 750px) {
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+  padding: 50px 10px 50px 10px;
+  }
+}
+@media(max-width: 500px) {
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+  padding: 30px 7px 30px 10px;
+  }
+}
+
