@@ -10,7 +10,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 body::before {
-  background: url("images/bg.jpg") no-repeat center center;
+  background: url("images/BGG.jpeg") no-repeat center;
   background-size: cover;
   content: " ";
   height: 100%;
@@ -83,6 +83,7 @@ nav {
   font-weight: 500;
   line-height: 1;
   padding: 10px 0;
+  cursor: pointer;
 }
 .header__text:hover {
   color: #beb8b8;

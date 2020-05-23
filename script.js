@@ -5,13 +5,16 @@ $(function() {
 // SMOOTH SCROLL
   $("[data-scroll]").on("click", function() {
     event.preventDefault();
-    
+
     let blockId = $(this).data("scroll");
     let blockOffset = $(blockId).offset().top;
     
     $('html, body').animate({
         scrollTop: blockOffset
     }, 500);
+
+    $("nav").removeClass("active");
+    $("#burger").removeClass("active")
     });
 
     // BURGER BTN
