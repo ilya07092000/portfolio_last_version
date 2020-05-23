@@ -87,6 +87,9 @@ nav {
 .header__text:hover {
   color: #beb8b8;
 }
+.swiper-container {
+  z-index: 999999 !important;
+}
 
 nav a {
   color: white;
@@ -443,14 +446,7 @@ nav a:hover::after {
 .works__img {
   border-radius: 7px 7px 0 0;
 }
-.works__name {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: center;
-  padding: 0.2rem 0 1.5rem;
-  background-color: rgba(0, 0, 0, 0.4);
-}
+
 @media (max-width: 1000px) {
   .works__header {
     font-size: 4rem;
@@ -637,4 +633,35 @@ nav a:hover::after {
   padding: 30px 7px 30px 10px;
   }
 }
+@media(max-width: 420px) {
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+  padding: 20px 7px 20px 10px;
+  }
+}
 
+
+.works__footer {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.2rem 0 1.5rem;
+  background-color: rgba(36, 36, 36, 0.8)
+}
+.works__footer p {
+  padding: 0;
+  margin: 0;
+}
+.works__footer a {
+  display: inline-block;
+  color: #58beff;
+  margin: 3px 0 10px 0;
+}
+.works__footer a:hover {
+  color: #b6cdf8;
+}
+.swiper-pagination-bullet {
+  background: #fff !important;
+  opacity: .7;
+}
