@@ -54,7 +54,7 @@ body.active {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 999999;
+  z-index: 999999999;
   max-width: 100%;
   background-color: rgba(46, 29, 29, 0.7);
   width: 100%;
@@ -64,7 +64,6 @@ body.active {
 nav {
   display: block;
 }
-
 .header__nav__inner {
   display: -webkit-box;
   display: flex;
@@ -255,6 +254,23 @@ nav a:hover::after {
   margin-top: 2rem;
   font-size: 2rem;
   color: #57b5ff;
+  margin-bottom: 100px;
+  word-spacing: 7px;
+  letter-spacing: 2px;
+}
+.download__btn {
+  padding: 7px 15px;
+  background-color: rgba(0, 129, 211, 0.7);
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 25px;
+  border-radius: 16px;
+  transition: background .1s linear;
+  text-transform: uppercase;
+}
+.download__btn:hover {
+  background-color: rgba(0, 129, 211, 1);
 }
 .intro__btn {
   opacity: 0;
@@ -538,7 +554,7 @@ nav a:hover::after {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000000;
+  z-index: 9999999999;
   background-color: rgba(43, 42, 44, 0.7);
   padding: 1rem;
   overflow: auto;
