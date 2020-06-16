@@ -94,7 +94,7 @@ nav {
   z-index: 999999 !important;
 }
 
-nav a {
+nav button {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -107,6 +107,9 @@ nav a {
   display: inline-block;
   min-width: 72px;
   text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .burger {
   padding: 20px 10px;
@@ -158,7 +161,7 @@ nav a {
   left: 0;
   transition: transform .2s linear;
 }
-nav a:hover {
+nav button:hover {
   background-color: #1f4384;
 }
 nav a:hover::after {
