@@ -44,6 +44,9 @@ h6 {
   width: 100%;
   margin: 0 auto;
 }
+.page {
+  overflow: hidden;
+}
 body.active {
   overflow: hidden;
 }
@@ -285,12 +288,18 @@ nav a:hover::after {
   background-color: transparent;
 }
 
+
 .intro__btn:focus {
   outline: none;
 }
 
 .intro__btn img {
   width: 100px;
+  transition: .2s linear;
+}
+
+.intro__btn img:hover {
+  width: 110px;
 }
 
 @media (max-width: 991px) {
