@@ -103,13 +103,16 @@ nav button {
   transition: opacity 0.2s linear;
   font-size: 1rem;
   margin-left: 1rem;
-  padding: 32px 10px;
+  padding: 35px 10px;
   display: inline-block;
   min-width: 72px;
   text-align: center;
   background: none;
   border: none;
   cursor: pointer;
+}
+nav button:focus {
+  outline: none;
 }
 .burger {
   padding: 20px 10px;
@@ -190,7 +193,7 @@ nav a:hover::after {
   .header__nav__inner {
     flex-wrap: wrap;
   }
-  nav a {
+  nav button {
     width: 100%;
     margin: 0 auto;
     border-bottom: 1px solid rgb(131, 105, 105);
@@ -352,7 +355,7 @@ nav a:hover::after {
   .intro__btn img {
     width: 60px;
   }
-  nav a {
+  nav button {
     padding: 25px 10px;
   }
   .header__text {
