@@ -10,7 +10,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 body::before {
-  background: url("images/BGG.jpeg") no-repeat center;
+  background: url("images/BGG-min.jpeg") no-repeat center;
   background-size: cover;
   content: " ";
   height: 100%;
@@ -263,7 +263,6 @@ nav a:hover::after {
   margin-top: 2rem;
   font-size: 2rem;
   color: #57b5ff;
-  margin-bottom: 100px;
   word-spacing: 7px;
   letter-spacing: 2px;
 }
@@ -307,6 +306,11 @@ nav a:hover::after {
 .intro__btn img:hover {
   width: 110px;
 }
+@media (max-width: 1230px) {
+  .intro__inner h1 {
+    font-size: 8rem;
+  }
+}
 
 @media (max-width: 991px) {
   .intro__inner h1 {
@@ -346,7 +350,7 @@ nav a:hover::after {
 }
 @media (max-width: 576px) {
   .intro__inner h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
   .intro__inner h3 {
     font-size: 0.8rem;
@@ -362,6 +366,12 @@ nav a:hover::after {
     padding: 5px 0;
   }
 }
+@media (max-width: 470px) {
+  .intro__inner h1 {
+    font-size: 3.5rem;
+  }
+}
+
 @media (max-width: 400px) {
   .intro__inner h1 {
     font-size: 2.5rem;
