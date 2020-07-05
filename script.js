@@ -45,9 +45,10 @@ $(function() {
         $("body").addClass("active");
     });
 
-    $("#nav__contact").on("click", function() {
+    $("#header__nav").on("click", function() {
+        if(event.target.id !== 'nav__contact') return;
         $("#burger").removeClass("active")
-        $("nav").removeClass("active");
+        $(".nav__mobile").removeClass("active");
         $(".modal__container").fadeIn();
         $("body").addClass("active");
 
