@@ -13,13 +13,13 @@ $(function() {
         scrollTop: blockOffset
     }, 500);
 
-    $("nav").removeClass("active");
+    $(".nav__mobile").removeClass("active");
     $("#burger").removeClass("active")
     });
 
     // BURGER BTN
     $("#burger").on("click", function() {
-        $("nav").toggleClass("active");
+        $(".nav__mobile").toggleClass("active");
         $("#burger").toggleClass("active")
     })
 

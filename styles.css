@@ -38,6 +38,18 @@ h6 {
 * {
   box-sizing: border-box;
 }
+.nav__mobile {
+  transform: scaleY(0);
+  opacity: 0;
+  transform-origin: 0 0;
+  transition: .2s linear;
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(46, 29, 29, 0.7);
+  z-index: 999;
+}
 .container {
   max-width: 1230px;
   padding: 0 15px;
@@ -94,7 +106,8 @@ nav {
   z-index: 999999 !important;
 }
 
-nav button {
+nav button,
+.nav__mobile button {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -111,7 +124,8 @@ nav button {
   border: none;
   cursor: pointer;
 }
-nav button:focus {
+nav button:focus,
+.nav__mobile button:focus {
   outline: none;
 }
 .burger {
@@ -164,7 +178,8 @@ nav button:focus {
   left: 0;
   transition: transform .2s linear;
 }
-nav button:hover {
+nav button:hover,
+.nav__mobile button:hover {
   background-color: #1f4384;
 }
 nav a:hover::after {
@@ -184,19 +199,24 @@ nav a:hover::after {
   }
   nav {
     display: none;
+    transform: scaleY(0);
     border-top: 1px solid rgb(131, 105, 105);
   }
-  nav.active {
-    display: block;
+  .nav__mobile.active {
+    transform: scaleY(1);
+    opacity: 1;
     width: 100%;
   }
   .header__nav__inner {
     flex-wrap: wrap;
   }
-  nav button {
+  .nav__mobile button {
     width: 100%;
     margin: 0 auto;
     border-bottom: 1px solid rgb(131, 105, 105);
+  }
+  .nav__mobile button:first-child {
+    border-top: 1px solid rgb(131, 105, 105);
   }
 }
 .intro {
@@ -359,7 +379,8 @@ nav a:hover::after {
   .intro__btn img {
     width: 60px;
   }
-  nav button {
+  nav button,
+  .nav__mobile button {
     padding: 25px 10px;
   }
   .header__text {
