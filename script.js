@@ -1,84 +1,91 @@
-$(function() {
-
-    $('.loader').delay(200).fadeOut('slow');
-  
-// SMOOTH SCROLL
-  $("[data-scroll]").on("click", function() {
-    event.preventDefault();
-
-    let blockId = $(this).data("scroll");
-    let blockOffset = $(blockId).offset().top;
-    
-    $('html, body').animate({
-        scrollTop: blockOffset
-    }, 500);
-
-    $(".nav__mobile").removeClass("active");
-    $("#burger").removeClass("active")
-    });
-
-    // BURGER BTN
-    $("#burger").on("click", function() {
-        $(".nav__mobile").toggleClass("active");
-        $("#burger").toggleClass("active")
-    })
-
-    // FIXED HEADER
-    let navigation = $("#header__nav"),
-        headerH = $("header").innerHeight(),
-        scrollOffset = 0;
-
-    $(window).on("scroll", function() {
-        scrollOffset = $(window).scrollTop(); 
-        if (scrollOffset > headerH - navigation.innerHeight() - 10) {
-            navigation.addClass("fixed");
-        } else {
-            navigation.removeClass("fixed");
-        }
-    });
-    
-    // MODAL
-    let modal = $("#modal");
-    
-    $(".intro__btn").on("click", function() {
-        $(".modal__container").fadeIn();
-        $("body").addClass("active");
-    });
-
-    $("#header__nav").on("click", function() {
-        if(event.target.id !== 'nav__contact') return;
-        $("#burger").removeClass("active")
-        $(".nav__mobile").removeClass("active");
-        $(".modal__container").fadeIn();
-        $("body").addClass("active");
-
-    })
-
-    $(".close__btn").on("click", function() {
-        $(".modal__container").fadeOut(); 
-        $("body").removeClass("active"); 
-    });
-
-    $("#modal").on("click", function(e) {
-        if (e.target == this) {
-            $(".modal__container").fadeOut();
-            $("body").removeClass("active");    
-        }
-    })
-
-    // SLIDER
-    var swiper = new Swiper('.swiper-container', {
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-
-      AOS.init();
+var swiper = new Swiper('.swiper-container', {
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
+
+AOS.init();
+
+// LOADER
+let loader = document.querySelector('.loader');
+
+setTimeout(() =>  loader.style.opacity = 0, 200);
+setTimeout(() => loader.style.display = 'none', 700);
+
+// SCROLL TO
+window.addEventListener('click', scrollThis);
+function scrollThis() {
+    let target = event.target.dataset.scroll;
+    if(target) {
+        let block = document.getElementById(`${target}`);
+        let cord = block.getBoundingClientRect().top + pageYOffset;
+
+        menuToggler();
+      
+        window.scrollTo({
+            top: cord,
+            behavior: "smooth"
+        })
+    }
+}
+
+// Mobile Menu 
+let burgetBtn = document.querySelector('#burger');
+let mobileMenu = document.querySelector('.nav__mobile');
+burgetBtn.addEventListener('click', menuToggler);
+
+function menuToggler() {
+    burgetBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+}
+
+// FIXED HEADER
+window.addEventListener('scroll', checkScroll);
+let header = document.querySelector('.header__nav');
+    scroll = 0;
+
+function checkScroll() {
+    scroll = window.scrollY;
+    if(scroll > 500) {
+        fixHeader();
+    } else {
+        header.classList.remove('fixed');
+    }
+};
+
+fixHeader();
+
+function fixHeader() {
+    header.classList.add('fixed');
+};
+
+// MODAL WINDOW
+window.addEventListener('click', openModal);
+window.addEventListener('click', closeModal);
+
+let modal = document.querySelector('.modal__container');
+
+function openModal() {
+    let target = event.target.dataset.click;
+    if(target) {
+        modal.classList.add('modal__active');
+    }
+}
+
+function closeModal() {
+    let target = event.target;
+    if(target.closest('.close__btn') || target.className === 'modal') {
+        modal.classList.remove('modal__active');
+    }
+}
+
+
+
+

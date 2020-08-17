@@ -10,10 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,400,500,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="script.js"></script>
     <title>Ilya Ischenko</title>
 </head>
 <body>
@@ -32,19 +30,19 @@
                             <span class="line"></span>
                         </button>
                         <nav>
-                            <button data-scroll="#home">home</button>
-                            <button data-scroll="#about">about</button>
-                            <button data-scroll="#works">works</button>
-                            <button id="nav__contact">Contact me</button>
+                            <button data-scroll="home">home</button>
+                            <button data-scroll="about">about</button>
+                            <button data-scroll="works">works</button>
+                            <button id="nav__contact" data-click="modal">Contact me</button>
                         </nav>
                     </div>
                 </div>
 
                 <div class="nav__mobile">
-                    <button data-scroll="#home">home</button>
-                    <button data-scroll="#about">about</button>
-                    <button data-scroll="#works">works</button>
-                    <button id="nav__contact">Contact me</button>
+                    <button data-scroll="home">home</button>
+                    <button data-scroll="about">about</button>
+                    <button data-scroll="works">works</button>
+                    <button id="nav__contact" data-click="modal">Contact me</button>
                 </div>
             </div>
             <div class="intro" id="home">
@@ -52,7 +50,7 @@
                     <div class="intro__inner">
                         <h1>Welcome</h1>
                         <h3>Scroll Down to see more</h3>
-                        <button class="intro__btn" id="intro__btn">
+                        <button class="intro__btn" id="intro__btn" data-click="modal">
                             <img src="./images/agenda.svg" alt="contacts">
                         </button>
                     </div>
@@ -280,13 +278,15 @@
         <!-- ./MODAL CONTAINER -->
 
         <div class="loader">
-            <div class="loader-container circle-pulse-multiple">
-                <div class="loader">
-                    <div class="circle-1"></div>
-                    <div class="circle-2"></div>
-                    <div class="circle-3"></div>
-                </div>
-            </div>		
+           <div class="loader__inner">
+                <div class="loader-container circle-pulse-multiple">
+                    <div class="loader">
+                        <div class="circle-1"></div>
+                        <div class="circle-2"></div>
+                        <div class="circle-3"></div>
+                    </div>
+                </div>		
+           </div>
         </div> 
     </div>
 
@@ -299,6 +299,7 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-            
+<script src="script.js"></script>
+
 </body>
 </html>
